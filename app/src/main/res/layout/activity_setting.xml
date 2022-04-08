@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".SettingActivity">
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:textOff="ON"
+        android:textOn="OFF"
+        android:text="@string/set_alarm"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:textOff="ON"
+        android:textOn="OFF"
+        android:text="@string/switch_theme"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailUserActivity">
+
+    <ImageView
+        android:id="@+id/iv_picture"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/avatar"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="TextView"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_picture"
+        app:layout_constraintStart_toStartOf="@+id/iv_picture"
+        app:layout_constraintTop_toBottomOf="@+id/iv_picture" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/tv_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/tv_username"
+        app:layout_constraintStart_toStartOf="@+id/tv_username"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username">
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradientbackground"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_loc"
+        app:tabTextColor="@color/black"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:text="tablayout" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab"
+        tools:ignore="SpeakableTextPresentCheck" >
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <TextView
+        android:id="@+id/tv_followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:textSize="15sp"
+        app:drawableStartCompat="@drawable/ic_people"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        tools:text="Followers" />
+
+    <TextView
+        android:id="@+id/tv_following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_followers"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username"
+        tools:text="Following" />
+
+    <TextView
+        android:id="@+id/tv_repost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        tools:text="Repository"
+        android:textSize="15sp"
+        android:layout_marginTop="6dp"
+        app:drawableStartCompat="@drawable/ic_baseline_repository"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_followers" />
+
+    <TextView
+        android:id="@+id/tv_comp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:textSize="15sp"
+        tools:text="Company"
+        app:drawableStartCompat="@drawable/ic_baseline_business_"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_repost" />
+
+    <TextView
+        android:id="@+id/tv_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="8dp"
+        android:textSize="15sp"
+        tools:text="Github"
+        app:drawableStartCompat="@drawable/ic_baseline_link"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comp" />
+
+    <TextView
+        android:id="@+id/tv_loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:textSize="15sp"
+        tools:text="Location"
+        app:drawableStartCompat="@drawable/ic_baseline_location_on"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_link" />
+
+
+    <ToggleButton
+        android:id="@+id/tgl_favorite"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="16dp"
+        android:textOn=""
+        android:textOff=""
+        android:background="@drawable/toggle_favorite"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_picture" />
+</androidx.constraintlayout.widget.ConstraintLayout>
